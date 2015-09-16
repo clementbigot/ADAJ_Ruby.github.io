@@ -9428,22 +9428,20 @@ button.close {
 .footer_down {
   font-size: 20px;
   background-color: #9B93EA;
-  border-radius: 10px;
-  height: auto;
-  width: auto; }
+  border-radius: 10px; }
 
-/* line 11, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/layout/_footer.css.scss */
+/* line 9, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/layout/_footer.css.scss */
 address {
   color: white;
   margin-top: -70px;
   font-size: 14px;
   margin-left: 80px; }
 
-/* line 17, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/layout/_footer.css.scss */
+/* line 15, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/layout/_footer.css.scss */
 #tel {
   margin-top: -50px; }
 
-/* line 20, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/layout/_footer.css.scss */
+/* line 18, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/layout/_footer.css.scss */
 #copyright {
   color: white;
   font: 700 18px OpenSans; }
