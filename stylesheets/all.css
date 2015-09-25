@@ -16,7 +16,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url(vendor/bootstrap-image-gallery.min.css);
 /* line 9, /home/clement/.rvm/gems/ruby-2.2.1/gems/bootstrap-sass-3.3.5.1/assets/stylesheets/bootstrap/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -12633,3 +12632,613 @@ stretchRight
     -webkit-transform: scaleX(1.01); }
   100% {
     -webkit-transform: scaleX(1); } }
+/*
+ * blueimp Gallery Indicator CSS 1.1.0
+ * https://github.com/blueimp/Gallery
+ *
+ * Copyright 2013, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+/* line 13, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery-indicator.css.scss */
+.blueimp-gallery > .indicator {
+  position: absolute;
+  top: auto;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  margin: 0 40px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 10px;
+  display: none; }
+
+/* line 26, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery-indicator.css.scss */
+.blueimp-gallery > .indicator > li {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin: 6px 3px 0 3px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 1px solid transparent;
+  background: #ccc;
+  background: rgba(255, 255, 255, 0.25) center no-repeat;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #000;
+  opacity: 0.5;
+  cursor: pointer; }
+
+/* line 42, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery-indicator.css.scss */
+.blueimp-gallery > .indicator > li:hover,
+.blueimp-gallery > .indicator > .active {
+  background-color: #fff;
+  border-color: #fff;
+  opacity: 1; }
+
+/* line 48, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery-indicator.css.scss */
+.blueimp-gallery-controls > .indicator {
+  display: block;
+  /* Fix z-index issues (controls behind slide element) on Android: */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0); }
+
+/* line 57, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery-indicator.css.scss */
+.blueimp-gallery-single > .indicator {
+  display: none; }
+
+/* line 60, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery-indicator.css.scss */
+.blueimp-gallery > .indicator {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* IE7 fixes */
+/* line 69, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery-indicator.css.scss */
+* + html .blueimp-gallery > .indicator > li {
+  display: inline; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery, .blueimp-gallery > .slides > .slide > .slide-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -moz-backface-visibility: hidden; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide > .slide-content {
+  margin: auto;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 1; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery {
+  position: fixed;
+  z-index: 999999;
+  overflow: hidden;
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  display: none;
+  direction: ltr;
+  -ms-touch-action: none;
+  touch-action: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery-carousel {
+  position: relative;
+  z-index: auto;
+  margin: 1em auto;
+  padding-bottom: 56.25%;
+  box-shadow: 0 0 10px #000;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery-display {
+  display: block;
+  opacity: 1; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides {
+  position: relative;
+  height: 100%;
+  overflow: hidden; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery-carousel > .slides {
+  position: absolute; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide {
+  position: relative;
+  float: left;
+  height: 100%;
+  text-align: center;
+  -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  -ms-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery, .blueimp-gallery > .slides > .slide > .slide-content {
+  -webkit-transition: opacity .5s linear;
+  -moz-transition: opacity .5s linear;
+  -ms-transition: opacity .5s linear;
+  -o-transition: opacity .5s linear;
+  transition: opacity .5s linear; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide-loading {
+  background: url(../img/loading.gif) center no-repeat;
+  background-size: 64px 64px; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide-loading > .slide-content {
+  opacity: 0; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide-error {
+  background: url(../img/error.png) center no-repeat; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide-error > .slide-content {
+  display: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .prev, .blueimp-gallery > .next {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  margin-top: -23px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 30px;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 2px #000;
+  text-align: center;
+  background: #222;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 3px solid #fff;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  opacity: .5;
+  cursor: pointer;
+  display: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .next {
+  left: auto;
+  right: 15px; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .close, .blueimp-gallery > .title {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  margin: 0 40px 0 0;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  opacity: .8;
+  display: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .close {
+  padding: 15px;
+  right: 15px;
+  left: auto;
+  margin: -15px;
+  font-size: 30px;
+  text-decoration: none;
+  cursor: pointer; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .play-pause {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 15px;
+  height: 15px;
+  background: url(../img/play-pause.png) 0 0 no-repeat;
+  cursor: pointer;
+  opacity: .5;
+  display: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery-playing > .play-pause {
+  background-position: -15px 0; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .prev:hover, .blueimp-gallery > .next:hover, .blueimp-gallery > .close:hover, .blueimp-gallery > .title:hover, .blueimp-gallery > .play-pause:hover {
+  color: #fff;
+  opacity: 1; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery-controls > .prev, .blueimp-gallery-controls > .next, .blueimp-gallery-controls > .close, .blueimp-gallery-controls > .title, .blueimp-gallery-controls > .play-pause {
+  display: block;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0); }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery-single > .prev, .blueimp-gallery-left > .prev, .blueimp-gallery-single > .next, .blueimp-gallery-right > .next, .blueimp-gallery-single > .play-pause {
+  display: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide > .slide-content, .blueimp-gallery > .prev, .blueimp-gallery > .next, .blueimp-gallery > .close, .blueimp-gallery > .play-pause {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+body:last-child .blueimp-gallery > .slides > .slide-error {
+  background-image: url(../img/error.svg); }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+body:last-child .blueimp-gallery > .play-pause {
+  width: 20px;
+  height: 20px;
+  background-size: 40px 20px;
+  background-image: url(../img/play-pause.svg); }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+body:last-child .blueimp-gallery-playing > .play-pause {
+  background-position: -20px 0; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+* + html .blueimp-gallery > .slides > .slide {
+  min-height: 300px; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+* + html .blueimp-gallery > .slides > .slide > .slide-content {
+  position: relative; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .indicator {
+  position: absolute;
+  top: auto;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  margin: 0 40px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 10px;
+  display: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .indicator > li {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin: 6px 3px 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 1px solid transparent;
+  background: #ccc;
+  background: rgba(255, 255, 255, 0.25) center no-repeat;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #000;
+  opacity: .5;
+  cursor: pointer; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .indicator > li:hover, .blueimp-gallery > .indicator > .active {
+  background-color: #fff;
+  border-color: #fff;
+  opacity: 1; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery-controls > .indicator {
+  display: block;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0); }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery-single > .indicator {
+  display: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .indicator {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+* + html .blueimp-gallery > .indicator > li {
+  display: inline; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide > .video-content > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  -moz-backface-visibility: hidden; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide > .video-content > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide > .video-content > iframe {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide > .video-playing > iframe {
+  top: 0; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide > .video-content > a {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin: -64px auto 0;
+  width: 128px;
+  height: 128px;
+  background: url(../img/video-play.png) center no-repeat;
+  opacity: .8;
+  cursor: pointer; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide > .video-content > a:hover {
+  opacity: 1; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide > .video-playing > a, .blueimp-gallery > .slides > .slide > .video-playing > img {
+  display: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide > .video-content > video {
+  display: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide > .video-playing > video {
+  display: block; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+.blueimp-gallery > .slides > .slide > .video-loading > a {
+  background: url(../img/loading.gif) center no-repeat;
+  background-size: 64px 64px; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+body:last-child .blueimp-gallery > .slides > .slide > .video-content:not(.video-loading) > a {
+  background-image: url(../img/video-play.svg); }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+* + html .blueimp-gallery > .slides > .slide > .video-content {
+  height: 100%; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_blueimp-gallery.min.css.scss */
+* + html .blueimp-gallery > .slides > .slide > .video-content > a {
+  left: 50%;
+  margin-left: -64px; }
+
+/*
+ * Bootstrap Image Gallery CSS 3.0.0
+ * https://github.com/blueimp/Bootstrap-Image-Gallery
+ *
+ * Copyright 2013, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+/* line 13, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.css.scss */
+.blueimp-gallery .modal-body {
+  position: relative;
+  text-align: center;
+  padding: 0 0 56.25% 0;
+  overflow: hidden;
+  cursor: pointer; }
+
+/* line 20, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.css.scss */
+.blueimp-gallery .modal-footer {
+  margin: 0; }
+
+/* line 23, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.css.scss */
+.blueimp-gallery .modal-body img,
+.blueimp-gallery .modal-body .video-content video,
+.blueimp-gallery .modal-body .video-content iframe,
+.blueimp-gallery .modal-body .video-content a {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+/* line 36, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.css.scss */
+.blueimp-gallery .modal-body .video-content video {
+  display: none; }
+
+/* line 39, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.css.scss */
+.blueimp-gallery .modal-body .video-playing video {
+  display: block; }
+
+/* line 42, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.css.scss */
+.blueimp-gallery .modal-body .video-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  left: 100%; }
+
+/* line 48, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.css.scss */
+.blueimp-gallery .modal-body .video-playing iframe {
+  left: 0; }
+
+/* line 51, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.css.scss */
+.blueimp-gallery .modal-body .video-playing img,
+.blueimp-gallery .modal-body .video-playing a {
+  display: none; }
+
+/* line 55, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.css.scss */
+.blueimp-gallery .modal-body .video-content a {
+  cursor: pointer; }
+
+/* line 58, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.css.scss */
+.blueimp-gallery .modal-body .video-content a:after {
+  font-family: "Glyphicons Halflings";
+  -webkit-font-smoothing: antialiased;
+  content: "\e029";
+  font-size: 64px;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 50%;
+  margin: -32px 0 0 -32px; }
+
+/* line 70, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.css.scss */
+.blueimp-gallery .modal-body .video-loading a {
+  background: url(../img/loading.gif) center no-repeat;
+  background-size: 64px 64px; }
+
+/* line 74, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.css.scss */
+.blueimp-gallery .modal-body .video-loading a:after {
+  content: none; }
+
+@media screen and (min-width: 768px) {
+  /* line 79, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.css.scss */
+  .blueimp-gallery .modal-dialog {
+    right: auto;
+    left: auto;
+    width: auto;
+    max-width: 900px;
+    padding-left: 5%;
+    padding-right: 5%; } }
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.min.css.scss */
+.blueimp-gallery .modal-body {
+  position: relative;
+  text-align: center;
+  padding: 0 0 56.25%;
+  overflow: hidden;
+  cursor: pointer; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.min.css.scss */
+.blueimp-gallery .modal-footer {
+  margin: 0; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.min.css.scss */
+.blueimp-gallery .modal-body img, .blueimp-gallery .modal-body .video-content video, .blueimp-gallery .modal-body .video-content iframe, .blueimp-gallery .modal-body .video-content a {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.min.css.scss */
+.blueimp-gallery .modal-body .video-content video {
+  display: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.min.css.scss */
+.blueimp-gallery .modal-body .video-playing video {
+  display: block; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.min.css.scss */
+.blueimp-gallery .modal-body .video-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  left: 100%; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.min.css.scss */
+.blueimp-gallery .modal-body .video-playing iframe {
+  left: 0; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.min.css.scss */
+.blueimp-gallery .modal-body .video-playing img, .blueimp-gallery .modal-body .video-playing a {
+  display: none; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.min.css.scss */
+.blueimp-gallery .modal-body .video-content a {
+  cursor: pointer; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.min.css.scss */
+.blueimp-gallery .modal-body .video-content a:after {
+  font-family: "Glyphicons Halflings";
+  -webkit-font-smoothing: antialiased;
+  content: "\e029";
+  font-size: 64px;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 50%;
+  margin: -32px 0 0 -32px; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.min.css.scss */
+.blueimp-gallery .modal-body .video-loading a {
+  background: url(../img/loading.gif) center no-repeat;
+  background-size: 64px 64px; }
+
+/* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.min.css.scss */
+.blueimp-gallery .modal-body .video-loading a:after {
+  content: none; }
+
+@media screen and (min-width: 768px) {
+  /* line 1, /home/clement/Documents/Site/ADAJ_Ruby/source/stylesheets/vendor/_bootstrap-image-gallery.min.css.scss */
+  .blueimp-gallery .modal-dialog {
+    right: auto;
+    left: auto;
+    width: auto;
+    max-width: 900px;
+    padding-left: 5%;
+    padding-right: 5%; } }
